@@ -12,7 +12,7 @@ Thanks for helping. The whole product is one file: [`SKILL.md`](plugins/lomonoso
 
 1. Fork, branch, change `SKILL.md` or docs.
 2. Check the plugin: `claude plugin validate .`
-3. Try it in a live session and describe what you tested.
+3. Try it in a live session and run the scenarios in [evals](evals/README.md). Describe what you tested.
 4. README banners are generated, do not edit the SVG by hand: `cd tools/readme && npm install && node build.mjs`
 
 By contributing you agree your work is licensed under Apache 2.0.

@@ -1,0 +1,10 @@
+name: Idea
+description: A subject, a game mechanic or an improvement
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like the tutor to do?
+    validations:
+      required: true

@@ -1,0 +1,22 @@
+name: The tutor gave the answer
+description: The tutor broke its main rule or lost its tone
+labels: [behavior]
+body:
+  - type: textarea
+    id: transcript
+    attributes:
+      label: Transcript
+      description: The part of the conversation where it went wrong.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should have happened
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Plugin version
+      placeholder: "1.1.0"
