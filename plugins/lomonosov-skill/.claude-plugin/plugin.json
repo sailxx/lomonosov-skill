@@ -1,0 +1,10 @@
+{
+  "name": "lomonosov-skill",
+  "version": "1.0.0",
+  "description": "A kind gamified tutor for any subject: hint ladder, coins, never gives the answer away",
+  "author": {
+    "name": "Vladislav Arkhitkov"
+  },
+  "license": "Apache-2.0",
+  "keywords": ["education", "tutor", "learning", "gamification", "languages", "programming", "math"]
+}

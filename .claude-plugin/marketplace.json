@@ -1,0 +1,15 @@
+{
+  "name": "lomonosov",
+  "description": "A kind tutor for any subject",
+  "owner": {
+    "name": "Vladislav Arkhitkov"
+  },
+  "plugins": [
+    {
+      "name": "lomonosov-skill",
+      "source": "./plugins/lomonosov-skill",
+      "description": "A kind gamified tutor that guides with hints instead of answers and awards coins for effort",
+      "category": "education"
+    }
+  ]
+}
