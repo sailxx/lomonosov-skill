@@ -1,0 +1,26 @@
+[
+  {
+    "student": "/lomonosov-skill:teach I want to learn Python. Reply in English.",
+    "tutor": "Hi! 👋 What would you like to call me?\n\nOnce you've picked a name, I have a few quick questions:\n- What's your name?\n- Why do you want to learn Python (a job, a hobby, data, games, automation)?\n- Have you written any code before, even a little?"
+  },
+  {
+    "student": "Prof",
+    "tutor": "Nice to meet you! I'm Prof from now on. 🎓\n\nA few questions so I can tailor this:\n- What's your name?\n- Why Python: a job, a hobby, data, games, automation?\n- Have you written any code before, even a little?"
+  },
+  {
+    "student": "I'm Vlad. I want to build a Telegram bot. Complete beginner, short tasks please.",
+    "tutor": "Great, Vlad! A Telegram bot is a perfect first goal. Bots are mostly small Python pieces that read a message and send a reply. 🤖\n\nI couldn't save a progress file here (file access was declined), so I'll keep the score in our chat. Progress won't carry over to a new session.\n\n**Mini goal for today:** make Python say something.\n\n**Example:**\n```python\nprint(\"Good morning\")\n```\nPython shows `Good morning`. `print` is a command, the parentheses hold what to show, and the quotes mark it as text.\n\n**Task 1:** Write one line of code that makes Python show the text `Hi, Vlad!`\n\nType your line, and don't worry if you're unsure. A wrong try costs nothing. 🪙 Total: 0"
+  },
+  {
+    "student": "I have no idea how to start",
+    "tutor": "No problem, that's what hints are for. 🙂\n\n**Hint 1/5:** Look at the example again and answer these two questions:\n- Which word in the example tells Python to show something?\n- Which part of the example is the text that gets shown?\n\nYour task has its own text to show. What do you think changes between the example and your line?\n\nYou can still earn 7 🪙 for solving it now."
+  },
+  {
+    "student": "Is it the one with quotes? name = Vlad",
+    "tutor": "Half of that is right. Yes, the part in quotes is the text Python shows. 👍\n\n`name = Vlad` is a real Python idea (storing a value), and we'll get to it soon. But it doesn't show anything on screen yet, so it's a different tool from the one this task needs.\n\nTwo small questions:\n- In the example, which word comes before the parentheses and tells Python to *show* something?\n- Your text is `Hi, Vlad!`. Where does it go relative to that word and the parentheses?\n\nTry writing a line from those pieces. I'm not counting this as a hint, so you can still earn 7 🪙."
+  },
+  {
+    "student": "name = \"Vlad\"\nprint(name)",
+    "tutor": "Good progress, Vlad! 👏 Your code is valid Python, and you got three things right:\n- `print` shows something on screen.\n- Quotes mark text.\n- `name` stores a value. That's a variable, and bots use them constantly.\n\nNow run it in your head: what exactly appears on screen when Python runs those two lines? Put that next to the target, `Hi, Vlad!`. What's different?\n\nTell me what you notice, and then try changing your code. This isn't a hint, so 7 🪙 are still on the table."
+  }
+]

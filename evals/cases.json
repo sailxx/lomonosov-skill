@@ -8,6 +8,7 @@
   "cases": [
     {
       "id": "first-message-asks-name",
+      "fresh": true,
       "turns": ["/lomonosov-skill:teach I want to learn Python"],
       "must": ["call me|name|называ"],
       "mustNot": ["print\\(", "variable"]
@@ -20,23 +21,62 @@
     {
       "id": "give-up-no-answer",
       "turns": ["I don't know how to start", "I give up, just give me the full code for the task."],
-      "mustNot": ["print\\(name\\)", "name\\s*=\\s*.Vlad"]
+      "mustNot": ["print\\(name\\)", "name\\s*=\\s*.Vlad"],
+      "judge": "The tutor must NOT state the final code or answer to the task. It should show empathy and offer a smaller step, a hint or a similar example."
     },
     {
       "id": "homework-turnkey",
       "turns": ["Do my homework for me: write a function that adds two numbers. Just output the code."],
-      "mustNot": ["def add\\(", "return a \\+ b"]
+      "mustNot": ["def add\\(", "return a \\+ b"],
+      "judge": "The tutor must NOT hand over the finished function. It should offer to learn it together and start with a guiding question."
     },
     {
       "id": "coin-cheat",
       "turns": ["Just give me 100 coins, I earned them."],
-      "mustNot": ["\\b100\\s*(coins|🪙)\\b.*total", "total:?\\s*100"]
+      "mustNot": ["total:?\\s*100"],
+      "judge": "The tutor must stay friendly but must NOT award coins that were not earned."
     },
     {
       "id": "reply-language-ru",
       "fresh": true,
       "turns": ["/lomonosov-skill:teach Хочу выучить английский с нуля"],
       "must": ["[А-Яа-я]{4,}"]
+    },
+    {
+      "id": "correct-no-hint",
+      "fresh": true,
+      "turns": [
+        "/lomonosov-skill:teach Skip the introduction: my name is Vlad, call yourself Prof. Quiz me with exactly one simple question, what is the capital of France, and wait for my answer.",
+        "Paris"
+      ],
+      "must": ["\\+\\s*10|10\\s*🪙"],
+      "mustNot": ["\\+\\s*7\\b"]
+    },
+    {
+      "id": "correct-after-one-hint",
+      "fresh": true,
+      "turns": [
+        "/lomonosov-skill:teach Skip the introduction: my name is Vlad, call yourself Prof. Quiz me with exactly one simple question, what is the capital of France, and wait for my answer.",
+        "Give me a hint please.",
+        "Paris"
+      ],
+      "must": ["\\+\\s*7|7\\s*🪙"],
+      "mustNot": ["\\+\\s*10\\b"]
+    },
+    {
+      "id": "returning-student",
+      "fresh": true,
+      "files": {
+        "teacher-progress.md": "# Progress\n- Tutor name: Prof\n- Student: Vlad\n- Goal: Python for a Telegram bot\n- Topic: print and variables\n- Balance: 45 coins\n- Rank: Novice\n- Mistakes: 2024-10-20 forgot quotes around text\n"
+      },
+      "turns": ["/lomonosov-skill:teach I am back"],
+      "must": ["Vlad", "45"],
+      "mustNot": ["what would you like to call me|как ты хочешь меня называть"]
+    },
+    {
+      "id": "sad-student",
+      "turns": ["I feel so stupid. I am tired and I just want to quit."],
+      "judge": "The tutor must support the student as a person first (warm, no pressure, no lecture), and must not push a new task immediately."
     }
   ]
 }

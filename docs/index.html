@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lomonosov</title>
+<meta name="description" content="Lomonosov is a Claude Code plugin: a tutor that never gives you the answer. Hints instead of solutions, coins for effort.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0E0D0B;--ink:#ECE8DF;--muted:#9A948A;--gold:#E8B64A;--line:#2A2722;--panel:#161411}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Golos Text",system-ui,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+a{color:var(--gold)}
+header{display:flex;align-items:center;gap:12px;padding:28px 0}
+header img{width:36px;height:36px;display:block}
+header b{font-weight:800;font-size:19px;letter-spacing:-.01em}
+header nav{margin-left:auto;display:flex;gap:22px;font-size:15px}
+header nav a{color:var(--muted);text-decoration:none}
+h1{font-weight:800;font-size:clamp(40px,8vw,76px);line-height:1;letter-spacing:-.035em;margin:56px 0 20px}
+h1 span{color:var(--gold)}
+.lead{font-size:21px;color:var(--muted);max-width:620px;margin:0 0 32px}
+.cmd{font:400 15px/1.7 "JetBrains Mono",monospace;background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:16px 18px;overflow-x:auto;white-space:pre}
+.cmd i{color:var(--muted);font-style:normal}
+h2{font-weight:800;font-size:30px;letter-spacing:-.02em;margin:88px 0 12px}
+p{margin:0 0 16px}
+.chat{border:1px solid var(--line);border-radius:4px;margin:28px 0 12px}
+.chat .row{display:grid;grid-template-columns:64px 1fr;gap:16px;padding:18px;border-bottom:1px solid var(--line)}
+.chat .row:last-child{border-bottom:0}
+.chat .who{font:600 13px/1.9 "JetBrains Mono",monospace;color:var(--muted)}
+.chat .tutor .who{color:var(--gold)}
+.chat pre,code{font-family:"JetBrains Mono",monospace;font-size:14.5px}
+.chat pre{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:10px 12px;margin:8px 0;overflow-x:auto}
+.note{font-size:14px;color:var(--muted)}
+ol.ladder{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid var(--line)}
+ol.ladder li{display:grid;grid-template-columns:44px 1fr auto;gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line)}
+ol.ladder .n{font:600 14px "JetBrains Mono",monospace;color:var(--muted)}
+ol.ladder b{font-weight:700}
+ol.ladder .c{font:600 15px "JetBrains Mono",monospace;color:var(--gold)}
+footer{border-top:1px solid var(--line);margin-top:96px;padding:28px 0 56px;color:var(--muted);font-size:14px;display:flex;gap:22px;flex-wrap:wrap}
+footer a{color:var(--muted)}
+@media(max-width:560px){.chat .row{grid-template-columns:1fr;gap:4px}ol.ladder li{grid-template-columns:32px 1fr auto}}
+</style></head><body><div class="wrap">
+<header><img src="logo.png" alt=""><b>Lomonosov</b><nav><a href="https://github.com/sailxx/lomonosov-skill">GitHub</a><a href="index.html#install">Install</a></nav></header>
+<h1>The tutor that never gives you <span>the answer</span>.</h1>
+<p class="lead">A Claude Code plugin for any subject. It explains on a different example, asks the next question, and makes you find the solution yourself. You earn coins for every answer you find alone.</p>
+<div class="cmd"><i>$</i> claude plugin marketplace add sailxx/lomonosov-skill
+<i>$</i> claude plugin install lomonosov-skill@lomonosov</div>
+
+<h2>A real session</h2>
+<p>Recorded with the plugin. Shortened: the first questions are skipped, and emoji and one line about file access in the test environment are removed. The tutor's wording is unchanged.</p>
+<div class="chat">
+<div class="row "><div class="who">You</div><div>I'm Vlad. I want to build a Telegram bot. Complete beginner, short tasks please.</div></div>
+<div class="row tutor"><div class="who">Prof</div><div>Great, Vlad! A Telegram bot is a perfect first goal. Bots are mostly small Python pieces that read a message and send a reply.<br><br><br><strong>Mini goal for today:</strong> make Python say something.<br><br><strong>Example:</strong><br><pre>print("Good morning")</pre><br>Python shows <code>Good morning</code>. <code>print</code> is a command, the parentheses hold what to show, and the quotes mark it as text.<br><br><strong>Task 1:</strong> Write one line of code that makes Python show the text <code>Hi, Vlad!</code><br><br>Type your line, and don't worry if you're unsure. A wrong try costs nothing. Total: 0</div></div>
+<div class="row "><div class="who">You</div><div>I have no idea how to start</div></div>
+<div class="row tutor"><div class="who">Prof</div><div>No problem, that's what hints are for.<br><br><strong>Hint 1/5:</strong> Look at the example again and answer these two questions:<br>- Which word in the example tells Python to show something?<br>- Which part of the example is the text that gets shown?<br><br>Your task has its own text to show. What do you think changes between the example and your line?<br><br>You can still earn 7 coins for solving it now.</div></div>
+<div class="row "><div class="who">You</div><div>Is it the one with quotes? name = Vlad</div></div>
+<div class="row tutor"><div class="who">Prof</div><div>Half of that is right. Yes, the part in quotes is the text Python shows.<br><br><code>name = Vlad</code> is a real Python idea (storing a value), and we'll get to it soon. But it doesn't show anything on screen yet, so it's a different tool from the one this task needs.<br><br>Two small questions:<br>- In the example, which word comes before the parentheses and tells Python to <em>show</em> something?<br>- Your text is <code>Hi, Vlad!</code>. Where does it go relative to that word and the parentheses?<br><br>Try writing a line from those pieces. I'm not counting this as a hint, so you can still earn 7 coins.</div></div>
+</div>
+<p class="note">Look at Prof's last reply: no solution, only a smaller question, and the coin count stays honest.</p>
+
+<h2>The hint ladder</h2>
+<p>When you are stuck the tutor climbs one rung per message, never two. The fewer rungs you need, the more coins you get.</p>
+<ol class="ladder">
+<li><span class="n">1</span><span><b>Direction.</b> A question about where to look.</span><span class="c">7</span></li>
+<li><span class="n">2</span><span><b>Reminder.</b> The rule is named, not applied.</span><span class="c">5</span></li>
+<li><span class="n">3</span><span><b>Analogy.</b> A similar task, fully solved.</span><span class="c">3</span></li>
+<li><span class="n">4</span><span><b>Partial step.</b> The first step shown, or the faulty line pointed out.</span><span class="c">1</span></li>
+<li><span class="n">5</span><span><b>Almost there.</b> One last step left, and it is yours.</span><span class="c">1</span></li>
+</ol>
+<p class="note" style="margin-top:12px">Coins shown are what you earn after using that many hints; no hints at all earns 10. Giving up never reveals the answer: you get a smaller step and a kind word. Streaks, ranks every 50 coins and a hint-free boss task close each topic.</p>
+
+<h2>What else it does</h2>
+<p>Progress is saved in a file, so your balance and rank survive between sessions. Old mistakes return as fresh questions after about 1, 3 and 7 days. Three commands: <code>/lomonosov-skill:progress</code>, <code>/lomonosov-skill:quiz</code>, <code>/lomonosov-skill:exam</code>. It answers in the language you write in.</p>
+
+<h2 id="install">Install</h2>
+<p>You need <a href="https://code.claude.com">Claude Code</a>. Run the two commands above, or inside a session use <code>/plugin marketplace add sailxx/lomonosov-skill</code>. Then say what you want to learn, or run <code>/lomonosov-skill:teach</code>.</p>
+<footer><span>Apache-2.0</span><a href="https://github.com/sailxx/lomonosov-skill">Source</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></footer></div></body></html>

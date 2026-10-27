@@ -5,6 +5,7 @@
   </picture>
 </p>
 
+[![Site](https://img.shields.io/badge/site-sailxx.github.io%2Flomonosov--skill-black?style=flat)](https://sailxx.github.io/lomonosov-skill/)
 [![License](https://img.shields.io/badge/license-Apache--2.0-black?style=flat)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-plugin-black?style=flat)](https://code.claude.com/docs/en/plugins)
 [![Stars](https://img.shields.io/github/stars/sailxx/lomonosov-skill?style=flat&color=black)](https://github.com/sailxx/lomonosov-skill)
@@ -17,25 +18,55 @@ It works for any subject: English or Japanese, Python or Rust, algebra, physics,
 
 ## See it in action
 
-A typical session (illustrative, shortened):
+A real session recorded with the plugin (shortened, emoji removed):
 
 ```text
-You      I want to learn Python.
-Tutor    Hi! What would you like to call me?
-You      Call me... Prof.
-Tutor    Prof it is. And what should I call you? What do you want to build with Python?
-You      Vlad. A Telegram bot.
-         ...
-Tutor    Task: write a loop that prints the numbers 1 to 5.
-You      I don't know how to start.
-Tutor    Hint 1 of 5. What does your loop need to know before it starts: where to begin,
-         where to stop, or both?
-You      Where to stop?
-Tutor    Close. Look at this one: for letter in "abc": print(letter)
-         What does it do? Try to predict the output.
-You      It prints a, b, c, one per line. So... for n in range(1, 6): print(n)?
-Tutor    You found it yourself, and you even got the off-by-one right. 
-         1 hint used.   +7 coins   Total: 37   Next rank at 50: Explorer
+You      I'm Vlad. I want to build a Telegram bot. Complete beginner, short tasks please.
+
+Prof     Great, Vlad! A Telegram bot is a perfect first goal. Bots are mostly small Python
+         pieces that read a message and send a reply.
+
+         Mini goal for today: make Python say something.
+
+         Example:
+         print("Good morning")
+         Python shows `Good morning`. `print` is a command, the parentheses hold what to
+         show, and the quotes mark it as text.
+
+         Task 1: Write one line of code that makes Python show the text `Hi, Vlad!`
+
+         Type your line, and don't worry if you're unsure. A wrong try costs nothing. Total:
+         0
+
+You      I have no idea how to start
+
+Prof     No problem, that's what hints are for.
+
+         Hint 1/5: Look at the example again and answer these two questions:
+         - Which word in the example tells Python to show something?
+         - Which part of the example is the text that gets shown?
+
+         Your task has its own text to show. What do you think changes between the example
+         and your line?
+
+         You can still earn 7 coins for solving it now.
+
+You      Is it the one with quotes? name = Vlad
+
+Prof     Half of that is right. Yes, the part in quotes is the text Python shows.
+
+         `name = Vlad` is a real Python idea (storing a value), and we'll get to it soon. But
+         it doesn't show anything on screen yet, so it's a different tool from the one this
+         task needs.
+
+         Two small questions:
+         - In the example, which word comes before the parentheses and tells Python to *show*
+         something?
+         - Your text is `Hi, Vlad!`. Where does it go relative to that word and the
+         parentheses?
+
+         Try writing a line from those pieces. I'm not counting this as a hint, so you can
+         still earn 7 coins.
 ```
 
 No lectures to skim, no copy-paste answers. Every task ends with you knowing how to do it.
@@ -81,6 +112,7 @@ Mikhail Lomonosov (1711-1765) walked to Moscow at 19 to study, became a chemist,
 
 ## Explore
 
+- [Website](https://sailxx.github.io/lomonosov-skill/)
 - [The skill itself](plugins/lomonosov-skill/skills/teach/SKILL.md): every rule of the tutor in one file
 - [Contributing](CONTRIBUTING.md)
 - [Code of conduct](CODE_OF_CONDUCT.md)
