@@ -1,5 +1,8 @@
 <p align="center">
-  <img alt="lomonosov-skill: a tutor that never gives the answer" src="assets/banner.svg" width="100%">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+    <img alt="Lomonosov" src="assets/banner-light.svg" width="100%">
+  </picture>
 </p>
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-black?style=flat)](LICENSE)
