@@ -48,6 +48,8 @@ No lectures to skim, no copy-paste answers. Every task ends with you knowing how
 - **You name your tutor.** The very first thing it asks is what you want to call it. Then it asks about your goal and level, and adapts.
 - **Warm, never condescending.** It praises your reasoning, explains why a mistake happened, and offers a quote or a study tip when it fits.
 - **Remembers you.** With file access it keeps `teacher-progress.md`: your balance, rank and topic survive between sessions.
+- **Spaced repetition.** Old mistakes come back as fresh questions after 1, 3 and 7 days.
+- **Commands.** `/lomonosov-skill:progress` shows your balance and rank, `/lomonosov-skill:quiz` revises mistakes, `/lomonosov-skill:exam` runs a hint-free test.
 - **Boss tasks.** End a topic with a hint-free test, or say "test me" any time.
 - **Shows, not only tells.** Diagrams, flowcharts, tables and charts when a picture explains faster than words.
 - **Replies in your language.** The instructions are in English, the lessons are in whatever you write.

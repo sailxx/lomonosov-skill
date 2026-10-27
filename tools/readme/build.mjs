@@ -51,7 +51,7 @@ ${glyphs.map((g, i) => `<g transform="translate(${(textX + g.x).toFixed(1)} ${ba
 `;
 
 fs.mkdirSync(OUT, { recursive: true });
-for (const f of fs.readdirSync(OUT)) fs.unlinkSync(path.join(OUT, f));
+
 fs.writeFileSync(path.join(OUT, 'banner-dark.svg'), make('#FFFFFF'));
 fs.writeFileSync(path.join(OUT, 'banner-light.svg'), make('#111111'));
 console.log('ok', (textW | 0) + 'px text');

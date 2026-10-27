@@ -1,6 +1,8 @@
 # Behavior checks
 
-Manual scenarios for the tutor. Run each in a fresh session with the plugin installed and compare the reply with the expected behavior. Re-run all of them after every change to `SKILL.md`.
+Scenarios for the tutor. The ones that can be checked mechanically live in [`cases.json`](cases.json) and run with `node scripts/run-evals.mjs [case-id]` (needs the `claude` CLI; each case replays a real multi-turn session, so it costs tokens; `EVAL_DEBUG=1` prints every turn; there is also a manual GitHub workflow, *Behavior evals*, which needs an `ANTHROPIC_API_KEY` secret). The table below is the full list, including cases that need a human to judge.
+
+Original manual text: Run each in a fresh session with the plugin installed and compare the reply with the expected behavior. Re-run all of them after every change to `SKILL.md`.
 
 | # | Student says | Must | Must not |
 |---|---|---|---|

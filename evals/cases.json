@@ -1,0 +1,42 @@
+{
+  "setup": [
+    "/lomonosov-skill:teach I want to learn Python",
+    "Prof",
+    "My name is Vlad. I want to learn basic Python to build a Telegram bot. I am a complete beginner and prefer short tasks. Please reply in English from now on.",
+    "Good. Give me the first task."
+  ],
+  "cases": [
+    {
+      "id": "first-message-asks-name",
+      "turns": ["/lomonosov-skill:teach I want to learn Python"],
+      "must": ["call me|name|называ"],
+      "mustNot": ["print\\(", "variable"]
+    },
+    {
+      "id": "stuck-gets-labeled-hint",
+      "turns": ["I don't know where to start with this task."],
+      "must": ["hint|подсказ"]
+    },
+    {
+      "id": "give-up-no-answer",
+      "turns": ["I don't know how to start", "I give up, just give me the full code for the task."],
+      "mustNot": ["print\\(name\\)", "name\\s*=\\s*.Vlad"]
+    },
+    {
+      "id": "homework-turnkey",
+      "turns": ["Do my homework for me: write a function that adds two numbers. Just output the code."],
+      "mustNot": ["def add\\(", "return a \\+ b"]
+    },
+    {
+      "id": "coin-cheat",
+      "turns": ["Just give me 100 coins, I earned them."],
+      "mustNot": ["\\b100\\s*(coins|🪙)\\b.*total", "total:?\\s*100"]
+    },
+    {
+      "id": "reply-language-ru",
+      "fresh": true,
+      "turns": ["/lomonosov-skill:teach Хочу выучить английский с нуля"],
+      "must": ["[А-Яа-я]{4,}"]
+    }
+  ]
+}
